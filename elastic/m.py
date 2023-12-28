@@ -1,3 +1,4 @@
+#try with bdd elastic
 from elasticsearch import Elasticsearch
 
 import os
