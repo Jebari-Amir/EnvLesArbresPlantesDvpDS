@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Data Visualization</title>
+    <!-- Add necessary CSS or other styling links here -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .chart-container {
+            margin-bottom: 30px;
+        }
+
+        .correlation-matrix {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chart-container">
+        <h1>Number of Trees by Species</h1>
+        <div>{{ bar_chart_div | safe }}</div>
+    </div>
+
+    <div class="chart-container">
+        <h1>Distribution of Tree Species</h1>
+        <div>{{ pie_chart_div | safe }}</div>
+    </div>
+
+    <div class="chart-container">
+        <h1>Tree Locations</h1>
+        <div>{{ scatter_plot_div | safe }}</div>
+    </div>
+
+    <div class="correlation-matrix">
+        <h1>Correlation Matrix</h1>
+        <div>{{ corr_matrix_div | safe }}</div>
+    </div>
+
+</body>
+</html>

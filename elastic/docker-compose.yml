@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  mysql1:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass
+      - MYSQL_DATABASE=test
+    container_name: mysql1
+    ports:
+      - "3306:3306"
+    networks:
+      - my_network
+
+  python-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql1
+    ports:
+      - "5000:5000"  # Map the Flask app port
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge

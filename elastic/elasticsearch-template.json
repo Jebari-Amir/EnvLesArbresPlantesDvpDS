@@ -1,0 +1,24 @@
+{
+  "mappings": {
+    "properties": {
+      "idbase": {"type": "keyword"},
+      "domanialite": {"type": "text"},
+      "arrondissement": {"type": "text"},
+      "numero": {"type": "keyword"},
+      "complementadresse": {"type": "text"},
+      "adresse": {"type": "text"},
+      "libellefrancais": {"type": "text"},
+      "genre": {"type": "text"},
+      "remarquable": {"type": "keyword"},
+      "genrefutur": {"type": "text"},
+      "motifabattage": {"type": "text"},
+      "geo_shape": {
+        "type": "geo_shape",
+        "ignore_malformed": true
+      },
+      "geo_point_2d": {
+        "type": "geo_point"
+      }
+    }
+  }
+}
